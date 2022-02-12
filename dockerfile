@@ -8,6 +8,6 @@ RUN rm packages-microsoft-prod.deb
 RUN apt-get update -qq
 RUN apt-get install -qq dotnet-sdk-6.0
 RUN mkdir /srv/Nuget
-RUN dotnet nuget add /srv/Nuget
+RUN dotnet nuget add source /srv/Nuget
 
 WORKDIR /app
